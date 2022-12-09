@@ -383,7 +383,8 @@ btnJSON.onclick = (e) => {
    navigator.clipboard.writeText(ourJSON);
    alert("Copied the JSON to clipboard, ready to paste into Bingosync\n\n"+ourJSON);
    document.getElementById("countryform").style.display="none";
-   document.getElementById("output").innerHTML = "Copied the JSON to clipboard, ready to paste into Bingosync, if it didn't copy, you can highlight it below and copy:\n\n"+ourJSON;
+   document.getElementById("output").innerHTML = "\nCopied the JSON to clipboard - ready to paste into Bingosync, if the automagic copy didn't work for whatever reason, you can highlight the JSON below and copy:\n\n"+ourJSON;
+   document.getElementById("btnReset").style.display="block"
 }
 
 checkbox.addEventListener('change', (event) => {
@@ -412,3 +413,8 @@ checkbox.addEventListener('change', (event) => {
   }
 })
 
+btnReset.onclick = (e) => {
+   e.preventDefault();
+   
+   window.location.reload()
+}

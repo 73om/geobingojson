@@ -54,6 +54,7 @@ LICENSE file in the root directory of this source tree. -->
             <div class="col-lg-3">
               Choose 25 countries on the map to the left. If you wish to remove one you can click it again or select one or more from the menu below and press the delete button.</br>
               Once you're happy, press the "Generate Bingo JSON" button and the JSON data will be copied to your clipboard ready to be pasted in the Bingosync website.<br />
+              <button id="btnReset">Start Over</button>
               <form class="countryform" id="countryform">
                 <label for="countrylist" id="listlabel">Selected countries (0/25):</label>
                 <select id="countrylist" name="countrylist" multiple size="25">
@@ -71,13 +72,13 @@ LICENSE file in the root directory of this source tree. -->
                 <button id="btnJSON">Generate Bingo JSON</button>
                 <br />
               </form>
+              <div id="output" style="white-space: pre-line"></div><br />
               <div><a href="https://bingosync.com/" target="_blank">Click here to go to Bingosync!</a></div><br />
-              <div id="output" style="white-space: pre-line"></div>
             </div>
             </div>
           <div class="mastfoot">
             <div class="inner">
-              <p>&copy; 2022 somegonker / <a href="https://heydoesthis.work">heydoesthis.work</a><br />The Geoguessr name is a registered trademark of GeoGuessr AB, Stockholm, Sweden. This site has no relation to GeoGuessr AB and doesn't claim to, and is using their name only to highlight that this free tool is used to generate data for an unofficial game mode to be played in conjunction with their Geoguessr game which can be found at <a href="https://www.geoguessr.com">geoguessr.com</a></p>
+              <p>&copy; 2022 somegonker / <a href="https://heydoesthis.work" target="_blank">heydoesthis.work</a><br />The Geoguessr name is a registered trademark of GeoGuessr AB, Stockholm, Sweden. This site has no relation to GeoGuessr AB and doesn't claim to, and is using their name only to highlight that this free tool is used to generate data for an unofficial game mode to be played in conjunction with their Geoguessr game which can be found at <a href="https://www.geoguessr.com" target="_blank">geoguessr.com</a></p>
             </div>
           </div>
 
