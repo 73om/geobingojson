@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2022, somegonker / https://heydoesthis.work>
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>ACW Geoguessr Bingo JSON Generator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link src="css/lib/bootstrap.min.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/lib/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h2 class="masthead-brand">Geoguessr bingo JSON generator</h2>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="col-lg-9">
+              <p>
+                <object class="mapsvg" id="svg-object" data="./img/worldmap.svg" type="image/svg+xml"> </object>
+                <text class="label" id="country-name" x="10" y="10"> </text>
+              </p>
+            </div>
+            <div class="col-lg-3">
+              Choose 25 countries on the map to the left. If you wish to remove one you can click it again or select one or more from the menu below and press the delete button.</br>
+              Once you're happy, press the "Generate Bingo JSON" button and the JSON data will be copied to your clipboard ready to be pasted in the Bingosync website.<br />
+              <form class="countryform" id="countryform">
+                <label for="countrylist" id="listlabel">Selected countries (0/25):</label>
+                <select id="countrylist" name="countrylist" multiple size="25">
+                  <option value="placeholder" disabled="True">Use map to select countries</option>
+                </select>
+                <div class="radio-inline">
+                  <input type="checkbox" id="freesquare" name="freesquare" value=False />
+                  <label class="labellyboi" for="freesquare" title="This option makes the middle square free (no country assigned)">Free Square Mode</label>
+                </div>
+                <div class="radio-inline">
+                  <input type="checkbox" id="randomise" name="randomise" value=False />
+                  <label class="randomboi" for="randomise" title="This option randomises the order of\nthe countries you have selected.">Randomise order</label>
+                </div>
+                <button id="btnRemove">Remove Selected Countr(y/ies)</button>
+                <button id="btnJSON">Generate Bingo JSON</button>
+                <br />
+              </form>
+              <div><a href="https://bingosync.com/" target="_blank">Click here to go to Bingosync!</a></div><br />
+              <div id="output" style="white-space: pre-line"></div>
+            </div>
+            </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>&copy; 2022 somegonker / <a href="https://heydoesthis.work">heydoesthis.work</a><br />The Geoguessr name is a registered trademark of GeoGuessr AB, Stockholm, Sweden. This site has no relation to GeoGuessr AB and doesn't claim to, and is using their name only to highlight that this free tool is used to generate data for an unofficial game mode to be played in conjunction with their Geoguessr game which can be found at <a href="https://www.geoguessr.com">geoguessr.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="css/lib/bootstrap.min.css"></script>
+    <script src="js/app.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="css/lib/ie10-viewport-bug-workaround.css"></script>
+  </body>
+</html>
